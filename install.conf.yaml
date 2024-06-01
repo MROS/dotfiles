@@ -15,6 +15,7 @@
 - shell:
   - command: git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf; ~/.fzf/install
     description: 安裝 fzf
-  - command: git clone git://github.com/wting/autojump.git ~/.autojump; cd ~/.autojump; ./install.py
+  - command: git clone https://github.com/wting/autojump ~/.autojump; ~/.autojump/install.py
     description: 安裝 autojump
   - command: curl -L git.io/antigen > ~/.antigen.zsh
+    description: 安裝 antigen (zsh 套件管理)

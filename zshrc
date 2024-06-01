@@ -25,13 +25,13 @@ SAVEHIST=10000
 # Load and initialize the Zsh completion system
 autoload -U compinit && compinit -u
 
-
 # pip 會把 binary 裝到 ~/.local/bin
 export PATH="$HOME/.local/bin:$PATH"
 
 # autojump
-# 需 sudo apt install autojump
-[[ -s /home/mros/.autojump/etc/profile.d/autojump.sh ]] && source /home/mros/.autojump/etc/profile.d/autojump.sh
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
+# mac 版 autojump ，需 brew install autojump
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
 # 載入 .zshrc_local
 [ -s "$HOME/.zshrc_local" ] && source "$HOME/.zshrc_local"
