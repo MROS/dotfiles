@@ -6,6 +6,7 @@
       relink: true
     ~/.local/share/nvim/site/autoload/plug.vim:
       path: plug.vim
+      create: true
     ~/.gitconfig:
       path: gitconfig
       relink: true
