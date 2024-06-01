@@ -1,0 +1,9 @@
+[alias]
+	co = checkout
+	br = branch
+	st = status
+[user]
+	email = yc1043@gmail.com
+	name = MROS
+[core]
+	editor = vim
