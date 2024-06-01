@@ -1,8 +1,9 @@
 - link:
     ~/.zshrc:
       path: zshrc
-    ~/.vimrc:
+    ~/.config/nvim/init.vim:
       path: vimrc
+      create: true
       relink: true
     ~/.local/share/nvim/site/autoload/plug.vim:
       path: plug.vim
@@ -12,8 +13,6 @@
       relink: true
 
 - shell:
-  - command: chsh -s $(which zsh)
-    description: 設 zsh 爲預設 shell
   - command: git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf; ~/.fzf/install
     description: 安裝 fzf
   - command: git clone git://github.com/wting/autojump.git ~/.autojump; cd ~/.autojump; ./install.py

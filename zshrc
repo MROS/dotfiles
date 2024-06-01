@@ -29,10 +29,6 @@ autoload -U compinit && compinit -u
 # pip 會把 binary 裝到 ~/.local/bin
 export PATH="$HOME/.local/bin:$PATH"
 
-# 設定 nvm (node version manager)
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
 # autojump
 # 需 sudo apt install autojump
 [[ -s /home/mros/.autojump/etc/profile.d/autojump.sh ]] && source /home/mros/.autojump/etc/profile.d/autojump.sh
