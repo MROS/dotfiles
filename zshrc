@@ -35,3 +35,5 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # 載入 .zshrc_local
 [ -s "$HOME/.zshrc_local" ] && source "$HOME/.zshrc_local"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

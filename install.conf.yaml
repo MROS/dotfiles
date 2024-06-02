@@ -3,7 +3,6 @@
       path: zshrc
     ~/.vimrc:
       path: vimrc
-      create: true
       relink: true
     ~/.config/nvim/init.vim:
       path: vimrc
@@ -12,17 +11,19 @@
     ~/.vim/autoload/plug.vim:
       path: plug.vim
       create: true
+      relink: true
     ~/.local/share/nvim/site/autoload/plug.vim:
       path: plug.vim
       create: true
+      relink: true
     ~/.gitconfig:
       path: gitconfig
       relink: true
+    ~/.config/tmux/tmux.conf.local:
+      path: tmux.conf.local
+      relink: true
+      create: true
 
 - shell:
-  - command: git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf; ~/.fzf/install
-    description: 安裝 fzf
-  - command: git clone https://github.com/wting/autojump ~/.autojump; ~/.autojump/install.py
-    description: 安裝 autojump
-  - command: curl -L git.io/antigen > ~/.antigen.zsh
-    description: 安裝 antigen (zsh 套件管理)
+  - command: ./download_plugins.sh
+    description: 安裝插件
