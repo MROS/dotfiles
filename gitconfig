@@ -2,6 +2,7 @@
 	co = checkout
 	br = branch
 	st = status
+	graph = log --all --graph --decorate --oneline
 [user]
 	email = yc1043@gmail.com
 	name = MROS
