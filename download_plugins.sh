@@ -1,6 +1,8 @@
 #! /usr/bin/env bash
-if [ "$(uname)" == "Darwin" ]; then
+
+if [[ "$(uname)" == "Darwin" ]]; then
     OS="Mac"
+	export PATH=/opt/homebrew/bin:$PATH
 else
     OS="Linux"
 fi
@@ -28,11 +30,11 @@ if [[ ! -d ~/.fzf ]]; then
 fi
 
 # 安裝 autojump
-if [ $OS == "Mac" ]; then
-    if ! command -v j &> /dev/null
+if [[ $OS == "Mac" ]]; then
+    if ! command -v "autojump" &> /dev/null;
     then
         echo "嘗試安裝 autojump"
-        brew install autojump;
+        brew install autojump
     fi
 else
     if [[ ! -d ~/.autojump ]]; then

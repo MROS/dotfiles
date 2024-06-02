@@ -27,3 +27,5 @@
 - shell:
   - command: ./download_plugins.sh
     description: 安裝插件
+    stdout: true
+    stderr: true
