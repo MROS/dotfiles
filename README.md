@@ -5,10 +5,13 @@
 sudo apt install zsh
 sudo chsh -s $(which zsh)
 
-# 安裝 neovim
+# 安裝 neovim （也可以用 vim 就好）
 sudo apt install neovim
 # 可移除原系統中的 vim
 # sudo apt remove vim
+
+# 安裝 cargo
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 安裝本專案管理之設定檔

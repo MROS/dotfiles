@@ -1,5 +1,6 @@
 #! /usr/bin/env bash
 
+# 目前無需判別系統，保留這段程式以備不時之需
 if [[ "$(uname)" == "Darwin" ]]; then
     OS="Mac"
 	export PATH=/opt/homebrew/bin:$PATH
@@ -21,7 +22,6 @@ if [[ ! -s ~/.config/tmux/tmux.conf ]]; then
     cd - || exit
 fi
 
-
 # 安裝 fzf
 if [[ ! -d ~/.fzf ]]; then
     echo "嘗試安裝 fzf..."
@@ -29,18 +29,10 @@ if [[ ! -d ~/.fzf ]]; then
     ~/.fzf/install
 fi
 
-# 安裝 autojump
-if [[ $OS == "Mac" ]]; then
-    if ! command -v "autojump" &> /dev/null;
-    then
-        echo "嘗試安裝 autojump"
-        brew install autojump
-    fi
-else
-    if [[ ! -d ~/.autojump ]]; then
-        echo "嘗試安裝 autojump"
-        git clone https://github.com/wting/autojump ~/.autojump; ~/.autojump/install.py
-    fi
+# 安裝 zoxide
+if ! command -v zoxide; then
+	echo "嘗試安裝 zoxide"
+    cargo install zoxide --locked
 fi
 
 # 安裝 antigen (zsh 套件管理器)

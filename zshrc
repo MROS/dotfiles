@@ -28,12 +28,13 @@ autoload -U compinit && compinit -u
 # pip 會把 binary 裝到 ~/.local/bin
 export PATH="$HOME/.local/bin:$PATH"
 
-# autojump
-[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
-# mac 版 autojump ，需 brew install autojump
-[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+# zoxide：目錄跳躍
+if command -v zoxide &> /dev/null; then
+	eval "$(zoxide init --cmd j zsh)"
+fi
 
 # 載入 .zshrc_local
 [ -s "$HOME/.zshrc_local" ] && source "$HOME/.zshrc_local"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
