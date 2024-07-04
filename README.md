@@ -3,7 +3,7 @@
 ```sh
 # 安裝 zsh
 sudo apt install zsh
-sudo chsh -s $(which zsh)
+sudo chsh -s $(which zsh) $(whoami)
 
 # 安裝 neovim （也可以用 vim 就好）
 sudo apt install neovim
