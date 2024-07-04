@@ -18,12 +18,21 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'ziglang/zig.vim'
 call plug#end()
 
+" 行號
 set nu
+
+" 搜尋
 set hlsearch
 set incsearch
+set ic " 不管大小寫
+
+" tab
+set smarttab
+set shiftwidth=4 " 1 tab == 4 空白
+set expandtab
 set tabstop=4
+
 set updatetime=100
-set ic "搜尋時不管大小寫
 
 filetype plugin indent on
 syntax on
