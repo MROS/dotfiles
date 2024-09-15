@@ -8,3 +8,4 @@
 	name = MROS
 [core]
 	editor = vim
+	quotePath = false
