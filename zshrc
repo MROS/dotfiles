@@ -5,6 +5,9 @@ antigen bundle zsh-users/zsh-completions
 antigen theme romkatv/powerlevel10k
 antigen apply
 
+# 讓 zsh-autosuggestions 的顏色更多樣
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
